@@ -1,0 +1,192 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   BODY – SMART DASHBOARD GRADIENT
+========================= */
+body {
+    min-height: 100vh;
+    padding: 30px;
+    background: linear-gradient(
+        135deg,
+        #1bb7a5 0%,
+        #0fa79d 35%,
+        #0b8f87 65%,
+        #066f6b 100%
+    );
+    position: relative;
+}
+
+/* SOFT LIGHT OVERLAY */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(
+        circle at top left,
+        rgba(255, 255, 255, 0.12),
+        transparent 60%
+    );
+    pointer-events: none;
+}
+
+/* =========================
+   DASHBOARD WRAPPER
+========================= */
+.dashboard {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* =========================
+   MAIN TITLE
+========================= */
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+}
+
+/* =========================
+   TOP SECTION LAYOUT
+========================= */
+.top-section {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* =========================
+   CARDS
+========================= */
+.card {
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 14px;
+    padding: 20px;
+    flex: 1;
+    min-width: 300px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+}
+
+.card.large {
+    flex: 2;
+    color:#5a1d9e
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    color: #8b226d;
+}
+
+/* =========================
+   FORM ELEMENTS
+========================= */
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #701b1b;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 9px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #8b53ab;
+}
+
+/* =========================
+   TEXTAREA
+========================= */
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+/* =========================
+   BUTTONS – LONG DASHBOARD STYLE
+========================= */
+.button-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+/* LONG BUTTONS (Clear / Sample / Add Event) */
+.btn-primary,
+.btn-secondary {
+    flex: 1;
+    height: 42px;
+    text-align: center;
+    background: linear-gradient(135deg, #5a1d9e, #3626c2);
+    color: #ffffff;
+}
+
+.card button {
+    width: 100%; /* Add Event full width */
+    margin-top: 15px;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* =========================
+   EMPTY TEXT
+========================= */
+.empty-text {
+    color: #666;
+    margin-top: 20px;
+}
+
+/* =========================
+   DOM MANIPULATION DEMO
+========================= */
+.dom-demo {
+    margin-top: 25px;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+}
+
+/* BORDER LIKE REAL DASHBOARD */
+.dom-demo p {
+    margin-top: 10px;
+    padding: 12px 14px;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #333;
+    font-weight: 500;
+}
