@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 550px;
+}
+
+.weather-app {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.badge {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-size: 14px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: normal;
+}
+
+.search-container {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+#cityInput {
+    flex: 1;
+    padding: 15px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 15px;
+    font-size: 16px;
+    transition: all 0.3s;
+    outline: none;
+}
+
+#cityInput:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+#searchBtn {
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+#searchBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+.weather-display {
+    min-height: 250px;
+    margin-bottom: 25px;
+}
+
+.loading {
+    text-align: center;
+    color: #999;
+    padding: 40px;
+    font-size: 16px;
+}
+
+.weather-card {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 25px;
+    padding: 25px;
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.weather-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.city-name {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+}
+
+.weather-icon {
+    font-size: 50px;
+}
+
+.weather-temp {
+    font-size: 48px;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.weather-condition {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.weather-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.detail-item {
+    text-align: center;
+}
+
+.detail-label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.detail-value {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.error-card {
+    background: linear-gradient(135deg, #ff6b6b, #ff4757);
+    color: white;
+    border-radius: 25px;
+    padding: 25px;
+    text-align: center;
+    animation: slideIn 0.5s ease;
+}
+
+.error-card i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.error-card p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.history-section {
+    background: #f8f9fa;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.history-header h3 {
+    color: #333;
+    font-size: 18px;
+}
+
+.clear-btn {
+    background: none;
+    border: 2px solid #e0e0e0;
+    color: #666;
+    padding: 8px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.clear-btn:hover {
+    background: #e0e0e0;
+    color: #333;
+}
+
+.history-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.history-item {
+    background: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 2px solid #e0e0e0;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.history-item:hover {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.no-history {
+    color: #999;
+    font-style: italic;
+    padding: 10px 0;
+}

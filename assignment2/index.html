@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Weather Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="weather-app">
+            <h1>Weather Tracker <span class="badge">Async</span></h1>
+            
+            <div class="search-container">
+                <input type="text" id="cityInput" placeholder="Enter city name..." value="London">
+                <button id="searchBtn">Get Weather</button>
+            </div>
+
+            <div id="weatherDisplay" class="weather-display">
+                <div class="loading">Search for a city to see weather</div>
+            </div>
+
+            <div class="history-section">
+                <div class="history-header">
+                    <h3>Recent Searches</h3>
+                    <button class="clear-btn" id="clearHistoryBtn">Clear All</button>
+                </div>
+                <ul id="historyList" class="history-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
